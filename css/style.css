@@ -192,6 +192,10 @@ a:focus {
   padding: 60px;
 }
 
+.bg-nav {
+  background-color: var(--md-light-bs);
+}
+
 .solid-bg {
   background: #f9f9f9;
 }
@@ -792,6 +796,7 @@ ul.top-info-box > li.nav-search i {
 }
 .navbar-toggler:focus {
   outline: 0;
+  box-shadow: none;
 }
 
 ul.navbar-nav > li:hover > a,
