@@ -1957,6 +1957,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   outline: 0;
   border: 0;
 }
+
 .page-slider .carousel-control.left {
   left: 0;
 }
@@ -1978,25 +1979,6 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
 }
 
-.page-slider.small-bg .item {
-  min-height: 330px;
-  background-size: cover;
-}
-
-.page-slider.small-bg .box-slider-content {
-  left: 20%;
-}
-
-.page-slider.small-bg .box-slider-text {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 5px 20px;
-}
-
-.page-slider.small-bg .box-slide-text {
-  font-size: 28px;
-  color: #fff;
-  font-weight: 900;
-}
 /* Misión Visión números */
 .text-color {
   color: var(--md-secondary);
@@ -2011,45 +1993,6 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 
-/*-- Get a quote page --*/
-.page-quote-form {
-  background: #f2f2f2;
-  padding: 30px 50px 50px;
-}
-
-.get-a-quote-img {
-  margin-bottom: -190px;
-}
-
-/*-- Partners carousel --*/
-.partner-logo {
-  border: 1px solid #eee;
-  padding: 20px;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-
-.partner-logo img {
-  transition: 350ms;
-  opacity: 0.6;
-  filter: grayscale(100%);
-}
-
-.partner-logo:hover img {
-  opacity: 1;
-  filter: grayscale(0%);
-}
-
-#partners-carousel .partner-logo {
-  border: 0;
-  border-right: 1px solid #eee;
-  padding: 0 15px;
-  margin-top: 20px;
-}
-
-#partners-carousel .partner-logo.last {
-  border-right: 0;
-}
 
 /*-- Team page --*/
 .team-slide .slick-slide {
