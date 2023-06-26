@@ -1,26 +1,3 @@
-/* Table of Content
-==================================================
-1. Global 
-2. Main navigation 
-3. Slider 
-4. Call to action 
-5. Features 
-6. Facts 
-7. Services 
-8. Project area 
-9. Content area 
-10. Testimonial 
-11. Subscribe area 
-12. News section 
-13. Footer 
-14. Sub Pages 
-15. Contact Us 
-16. News Listing 
-17. News Single 
-18. Sidebar 
-19. Error page
-*/
-
 @import url(tokens.css);
 
 /* Global */
@@ -28,7 +5,6 @@ body {
   background: #fff;
   color: var(--md-neutral30);
 }
-
 body,
 p {
   font-family: "Open Sans", sans-serif;
@@ -37,7 +13,6 @@ p {
   line-height: 26px;
   font-size: 15px;
 }
-
 h1,
 h2,
 h3,
@@ -50,7 +25,6 @@ h6 {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
 }
-
 h1 {
   font-size: 36px;
   line-height: 48px;
@@ -77,11 +51,9 @@ h5 {
   font-size: 14px;
   line-height: 24px;
 }
-
 .alert .icon {
   margin-right: 15px;
 }
-
 html {
   overflow-x: hidden !important;
   width: 100%;
@@ -90,18 +62,15 @@ html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-
 body {
   border: 0;
   margin: 0;
   padding: 0;
 }
-
 .body-inner {
   position: relative;
   overflow: hidden;
 }
-
 .preload {
   position: fixed;
   background: #fff url(../images/preload.gif) center center no-repeat;
@@ -111,17 +80,14 @@ body {
   height: 100%;
   z-index: 99999;
 }
-
 a:link,
 a:visited {
   text-decoration: none;
 }
-
 a {
   color: inherit;
   transition: 0.2s ease;
 }
-
 a:hover {
   text-decoration: none;
   color: var(--md-secondary-dark);
@@ -607,14 +573,11 @@ ul.top-info li p.info-text {
   display: inline-block;
   flex-direction: column;
 }
-
-
 /* Top social */
 .top-social ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  /* margin-right: -12px; */
 }
 @media (max-width: 767px) {
   .top-social ul {
@@ -632,7 +595,7 @@ ul.top-info li p.info-text {
   padding: 9px 12px;
 }
 .top-social ul li a:hover {
-  color: var(--md-secondary);
+  color: var(--md-secondary-light);
 }
 @media (max-width: 576px) {
   .top-social ul,
@@ -641,33 +604,19 @@ ul.top-info li p.info-text {
   }
 }
 
-
 /* Header */
 .header {
   background: #fff;
   position: relative;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
-
-/* .header-one .navbar-collapse {
-  padding-left: 0;
-} */
-
-/* @media (max-width: 991px) {
-  .navbar-collapse.collapse {
-    overflow-y: auto;
-  }
-} */
-
 .header-one ul.navbar-nav li {
   padding-right: 0;
   padding-left: 30px;
 }
-
 .header-one .logo-area {
   padding: 15px 10px;
 }
-
 .navbar-fixed {
   z-index: 9999;
   position: fixed;
@@ -880,11 +829,6 @@ ul.navbar-nav > li > a {
   transition: 350ms;
 }
 
-/* .navbar-light ul.navbar-nav > li > a {
-  color: #000 !important;
-  font-size: 13px;
-} */
-
 /* Dropdown */
 .dropdown-submenu {
   position: relative;
@@ -906,11 +850,9 @@ ul.navbar-nav > li > a {
   margin-right: -5px;
   border: 0;
 }
-
 .dropdown-submenu:hover > a:after {
   border-left-color: #fff;
 }
-
 .dropdown-menu {
   text-align: left;
   background: #fff;
@@ -1615,7 +1557,6 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   background: var(--bs-secondary);;
 }
 
-
 /* Content area
 ================================================== */
 /* Accordion */
@@ -1684,7 +1625,6 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   filter: gray;
 }
 
-
 /* Subscribe area
 ================================================== */
 .subscribe {
@@ -1733,6 +1673,10 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: var(--md-accent-light);
   font-size: 24px;
   margin: 0 5px 0 0;
+}
+
+#toLowerCase h4 {
+  text-transform: lowercase;
 }
 
 
@@ -1788,7 +1732,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   padding: 10px;
 }
 .footer-social ul li a i:hover {
-  color: var(--md-secondary-dark);
+  color: var(--md-secondary-light);
 }
 
 /* Links */
@@ -1801,7 +1745,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 .footer-widget ul.list-arrow li:hover a,
 .footer-widget ul.list-arrow li:hover {
-  color: var(--bs-secondary);
+  color: var(--md-secondary-light);
 }
 
 /*-- Copyright --*/
@@ -1827,8 +1771,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   padding: 0;
 }
 
-.footer-menu ul li a:hover {
-  color: #fff;
+.footer-menu a:hover {
+  color: var(--md-accent-light-hover) !important;
 }
 
 #back-to-top {
@@ -1992,177 +1936,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   text-justify: inter-word;
 }
 
-
-
-/*-- Team page --*/
-.team-slide .slick-slide {
-  margin-left: 25px;
-  padding-bottom: 60px;
-}
-.team-slide .slick-list {
-  margin-left: -25px;
-}
-.team-slide .carousel-control {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  border: 0;
-  background-color: #ddd;
-  height: 37px;
-  width: 37px;
-  border-radius: 4px;
-  transition: 0.3s;
-  z-index: 6;
-}
-.team-slide .carousel-control:hover {
-  background-color: var(--bs-secondary);;
-  color: #fff;
-}
-.team-slide .carousel-control.left {
-  transform: translateX(calc(-50% - 25px));
-}
-.team-slide .carousel-control.right {
-  transform: translateX(calc(-50% + 25px));
-}
-.team-slide .carousel-control.slick-disabled {
-  opacity: 0.4;
-}
-.team-slide .carousel-control.slick-disabled:hover {
-  background-color: #ddd;
-  color: #000;
-}
-
-.ts-team-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-.ts-team-wrapper .ts-team-content {
-  position: absolute;
-  top: 76%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 15px 25px;
-  margin-top: 0;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  transition: 350ms;
-}
-@media (max-width: 1200px) {
-  .ts-team-wrapper .ts-team-content {
-    top: 72%;
-  }
-}
-@media (max-width: 575px) {
-  .ts-team-wrapper .ts-team-content {
-    text-align: center;
-  }
-}
-.ts-team-wrapper .ts-name {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 3px;
-  line-height: normal;
-  color: var(--bs-secondary);;
-}
-.ts-team-wrapper .ts-designation {
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-.ts-team-wrapper .team-social-icons a i {
-  color: #fff;
-  margin-right: 8px;
-  text-align: center;
-  transition: 400ms;
-}
-.ts-team-wrapper .team-social-icons a i:hover {
-  color: var(--bs-secondary);;
-}
-.ts-team-wrapper:hover .ts-team-content {
-  top: 0;
-  padding-top: 50px;
-}
-
-/* Team Classic */
-.ts-team-content-classic {
-  margin-top: 15px;
-}
-.ts-team-content-classic .ts-name {
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: #212121;
-}
-.ts-team-content-classic .ts-designation {
-  color: #888;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
-.ts-team-content-classic .team-social-icons a i {
-  color: #999;
-}
-.ts-team-content-classic .team-social-icons a i:hover {
-  color: var(--bs-secondary);;
-}
-
-/*-- Pricing table  --*/
-.ts-pricing-box {
-  margin: 20px 0;
-  padding: 0;
-  text-align: center;
-  background: #f9f9f9;
-}
-.ts-pricing-box .ts-pricing-header {
-  background: #252525;
-  color: #fff;
-  position: relative;
-  padding: 30px 20px;
-}
-.ts-pricing-box .ts-pricing-name {
-  font-size: 18px;
-  line-height: normal;
-  margin: 0 0 5px 0;
-  color: #fff;
-}
-.ts-pricing-box .ts-pricing-price {
-  font-size: 44px;
-  color: #fff;
-  margin: 15px 0 0;
-  display: inline-block;
-}
-.ts-pricing-box .ts-pricing-price > small {
-  font-size: 16px;
-  line-height: 16px;
-  display: block;
-  margin-top: 15px;
-  color: #fff;
-}
-.ts-pricing-box .ts-pricing-features {
-  padding: 15px 0;
-}
-.ts-pricing-box .ts-pricing-features ul {
-  padding: 0 20px;
-}
-.ts-pricing-box .ts-pricing-features ul > li {
-  padding: 20px 0;
-  border-top: 1px dotted #e5e5e5;
-}
-.ts-pricing-box .ts-pricing-features ul > li:first-child {
-  border-top: 0;
-}
-.ts-pricing-box .plan-action {
-  padding-bottom: 40px;
-}
-
-/* Pricing featured */
-.ts-pricing-box.ts-pricing-featured .ts-pricing-header {
-  background: #ff9800;
-}
-
 /* Contact Us
 ================================================== */
-
 
 .contact-info-box i {
   font-size: 20px;
@@ -2189,11 +1964,9 @@ label {
   float: none;
   margin-bottom: 20px;
 }
-
 .ts-service-box.text-center .ts-service-box-content {
   margin: 0;
 }
-
 .contact-bg {
   background: var(--md-light-blue);
   border: 1px solid var(--md-light-bs);

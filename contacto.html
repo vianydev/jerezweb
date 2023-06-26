@@ -148,7 +148,7 @@
           <div class="col-md-5">
             <div class="contact-info-box pl-lg-5 mt-5 mt-lg-0">
               <h2 class="mb-1 mb-3">¿Necesita más información?</h2>
-              <p class="text-muted mb-6">No dude en contactarnos por cualquiera de los siguientes medios de contacto</p>
+              <!-- <p class="text-muted mb-6">No dude en contactarnos por cualquiera de los siguientes medios de contacto</p> -->
           
               <ul class="address-block list-unstyled">
                 <li class="my-3">
@@ -158,21 +158,31 @@
                   </div>
                 </li>
                 <li class="my-3">
-                  <i class="fa-solid fa-envelope me-4"></i>info@jerezyasociacos.com
+                  <i class="fa-solid fa-envelope me-4"></i>info@jerezyasociados.com
+                </li>
+                <li class="my-3">
+                  <i class="fa-solid fa-envelope me-4"></i>j.jerez@jerezyasociados.com
+                </li>
+                <li class="my-3">
+                  <i class="fa-solid fa-envelope me-4"></i>contacto@jerezyasociados.com
                 </li>
                 <li class="my-3">
                   <i class="fa-solid fa-phone me-4"></i>921 243 0930
                 </li>
-                <li class="my-3">
-                  <i class="fa-brands fa-whatsapp me-4"></i>921 280 7228
+                <li class="d-flex align-items-center my-3">
+                  <span class="d-flex flex-column me-4">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-solid fa-mobile-button"></i>
+                  </span>
+                  921 280 7228
                 </li>
               </ul>
           
             </div>
           </div>
-
+          <!-- formulario -->
           <div class="col-lg-7">
-            <form id="contact-form" class="contact-bg p-4" method="post" action="index.html">
+            <form id="contact-form" class="contact-bg p-4" action="https://formspree.io/f/xknlwrqa" method="POST" redirect="gracias.html">
               <div class="form-group my-4">
                 <p>Nombre:</p>
                 <input name="name" type="text" class="form-control" placeholder="Su nombre" required>
@@ -186,9 +196,10 @@
                 <textarea name="message" class="form-control" rows="6" placeholder="Su mensaje o consulta" required></textarea>
               </div>
               <div class="text-end">
-                <button class="btn-outline my-4 px-5" name="submit" type="submit">Enviar</button>
+                <button id="my-form-button" class="btn-outline my-4 px-5" name="submit" type="submit">Enviar</button>
               </div>
             </form>
+            <h1 id="my-form-status" class="text-center my-2"></h1>
           </div>
     
 
@@ -313,6 +324,39 @@
   <script src="plugins/shuffle/shuffle.min.js" defer></script>
 
   <script src="js/script.js"></script>
+
+  <script>
+    var form = document.getElementById("contact-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "¡Gracias por su consulta!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data[ "errors" ].map(error => error[ "message" ]).join(", ")
+            } else {
+              status.innerHTML = "Oops! Hubo un problema en su formulario"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! Hay un problema al enviar su mensaje"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
 </body>
 
 </html>

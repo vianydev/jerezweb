@@ -1,7 +1,8 @@
 :root {
   --md-primary: #180A4D;
   
-  --md-secondary: #952017;
+  --md-secondary: #a92a21;
+  --md-secondary-light: #ef7c74;
   --md-secondary-dark: #631610;
   --md-accent-light: #E8D5B5;
   --md-accent-light-hover: #f8c976;
